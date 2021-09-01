@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SeizeApp</string>
+    <string name="roll_label">Record past seizure.</string>
+</resources>
