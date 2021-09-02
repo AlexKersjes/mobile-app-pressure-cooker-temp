@@ -10,7 +10,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TestApplication">
-        <uses-permission android:name="aandroid.permission.INTERNET" />
         <activity
             android:name=".BluetoothActivity"
             android:exported="true">
