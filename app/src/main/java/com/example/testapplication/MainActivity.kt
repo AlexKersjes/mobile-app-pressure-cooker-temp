@@ -10,6 +10,7 @@ import android.widget.Toast
 import okhttp3.*
 import java.io.IOException
 import java.text.SimpleDateFormat
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,16 +32,20 @@ class MainActivity : AppCompatActivity() {
         runPostApi()
     }
 
+    @SuppressLint("SimpleDateFormat")
     private fun runPostApi() {
-        val url = "http://145.93.92.187:8000/seizure/create"
+        val url = "http://145.93.92.76:8000/seizure/create"
 
         val personId = 1
         val rndMagnitude = (1..10).random()
 
+        val sdf = SimpleDateFormat("yyyy/MM/dd HH:mm:ss")
+        val currentDateTime = sdf.format(Date())
+
         val formBody = FormBody.Builder()
             .add("personId", personId.toString())
-            .add("time", "3-Sep-2021 13:00:50")
-            .add("endTime", "3-Sep-2021 13:05:50")
+            .add("time", currentDateTime)
+            .add("endTime", currentDateTime)
             .add("magnitude", rndMagnitude.toString())
             .build()
 
