@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">SeizeApp</string>
     <string name="roll_label">Record past seizure.</string>
+    <string name="seizure_log">Seizure Log</string>
+    <string name="amount_of_seizures">Amount of seizures:</string>
+    <string name="average_time_of_seizures">Average time of seizures:</string>
 </resources>
